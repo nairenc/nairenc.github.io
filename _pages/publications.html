@@ -6,13 +6,13 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">Publications are listed in reverse chronological order. The most up-to-date list of my publications can be found on my<a href="{{site.author.googlescholar}}"> Google Scholar profile</a>.</div>
+  <div class="wordwrap">Publications are listed in reverse chronological order. The most up-to-date list of my publications can be found on my <a href="{{site.author.googlescholar}}"> Google Scholar profile</a>.</div>
 {% endif %}
 
-{% include base_path %}
+<!-- {% include base_path %} -->
 
 <!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
+<!-- {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
@@ -30,7 +30,141 @@ author_profile: true
   {% for post in site.publications reversed %}
     {% include archive-single.html %}
   {% endfor %}
-{% endif %}
+{% endif %} -->
+
+<table>
+          <tr><td valign="top" align="center" width=30px><p>2023</p></td>
+            <td><ul class="publist">
+
+          <li>
+
+          <p><!-- <a href="https://dl.acm.org/doi/10.1145/3558481.3591078"> -->Breaking 3-Factor Approximation for Correlation Clustering in Polylogarithmic Rounds.<!-- </a> --> <br>Nairen Cao, <a href="https://tmt514.github.io/"> Shang-En Huang</a>, <a href="https://sites.google.com/site/distributedhsinhao/"> Hsin-Hao Su</a>  <br>
+          SODA 2024 [<a href="files/CCparallel_24.pdf"> Paper </a>]
+<!--          [<a href="files/Nearly_optimal_parallel_longest_increasing_subsequence_spaa2023_slides.pdf"> Slides </a>] -->
+          <!-- [<a href="files/parallel_negative_sssp.pdf"> Paper </a>] -->
+          </p>
+          </li>
+
+          <li>
+
+          <p><!-- <a href="https://dl.acm.org/doi/10.1145/3558481.3591078"> -->Parallel and Distributed Exact Single-Source Shortest Paths with Negative Edge Weights.<!-- </a> --> <br><a href="https://k-variant.github.io/"> Vikrant Ashvinkumar </a> , <a href="https://aaronbernstein.cs.rutgers.edu/"> Aaron Bernstein </a> , Nairen Cao, <a href="https://people.inf.ethz.ch/cgrunau/"> Christoph Grunau </a> , <a href="https://people.inf.ethz.ch/haeuplb/"> Bernhard Haeupler </a> , <a href="https://jyg94.github.io/"> Yonggang Jiang </a> , <a href="https://sites.google.com/site/dannanongkai/"> Danupon Nanongkai </a>  , <a href="https://sites.google.com/site/distributedhsinhao/"> Hsin-Hao Su</a>  <br>
+          arXiv Version [<a href="files/parallel_negative_SSSP_almost_linear.pdf"> Paper </a>]
+<!--          [<a href="files/Nearly_optimal_parallel_longest_increasing_subsequence_spaa2023_slides.pdf"> Slides </a>] -->
+          <!-- [<a href="files/parallel_negative_sssp.pdf"> Paper </a>] -->
+          </p>
+          </li>
+
+          <li>
+
+          <p><a href="https://dl.acm.org/doi/10.1145/3558481.3591078">Nearly Optimal Parallel Algorithms for Longest Increasing Subsequence.</a> <br>Nairen Cao, <a href="https://tmt514.github.io/"> Shang-En Huang</a>, <a href="https://sites.google.com/site/distributedhsinhao/"> Hsin-Hao Su</a>  <br>
+          SPAA 2023 [<a href="files/nearlyopLIS.pdf"> Paper </a>][<a href="files/Nearly_optimal_parallel_longest_increasing_subsequence_spaa2023_slides.pdf"> Slides </a>]
+          <!-- [<a href="files/parallel_negative_sssp.pdf"> Paper </a>] -->
+          </p>
+          </li>
+
+          <tr><td valign="top" align="center" width=30px><p>2022</p></td>
+            <td><ul class="publist">
+
+          <li>
+
+
+          <p><a href="https://epubs.siam.org/doi/10.1137/1.9781611977554.ch166">Parallel Exact Shortest Paths in Almost Linear Work and Square
+          Root Depth. </a><br>Nairen Cao, 
+          <a href="http://people.cs.georgetown.edu/~jfineman/"> Jeremy T. Fineman</a> <br>
+          SODA 2023 
+          <!-- [<a href="files/parallel_negative_sssp.pdf"> Paper </a>] -->
+          </p>
+          </li>
+
+          <li>
+
+          <p><a href="https://drops.dagstuhl.de/opus/volltexte/2022/17321/">Nested Active-Time Scheduling. </a><br>Nairen Cao, 
+          <a href="http://people.cs.georgetown.edu/~jfineman/"> Jeremy T. Fineman</a>, 
+          <a href="https://cse.buffalo.edu/~shil/"> Shi Li</a>, 
+          <a href="https://scholar.google.com.au/citations?hl=en&user=Tbp-tkcAAAAJ&view_op=list_works&sortby=pubdate"> Julián Mestre</a>, 
+
+          <a href="https://katinarussell.github.io/"> Katina Russell</a>,
+          <a href="http://williamumboh.com/"> Seeun William Umboh</a> <br>
+          ISAAC 2022 [<a href="files/Active_time_scheduling__issac_version_2022.pdf"> Paper </a>]
+          [<a href="files/Nested_Active_Time_Scheduling_Slides.pdf"> Slides </a>]</p>
+          </li>   
+  
+          <li>
+
+          <p><a href="https://dl.acm.org/doi/abs/10.1145/3490148.3538583">Parallel Shortest Paths with Negative Edge Weights.</a> <br>Nairen Cao, 
+          <a href="http://people.cs.georgetown.edu/~jfineman/"> Jeremy T. Fineman</a>, <a href="https://katinarussell.github.io/"> Katina Russell</a> <br>
+          SPAA 2022 [<a href="files/parallel_negative_sssp.pdf"> Paper </a>]</p>
+          </li>
+
+          <li>
+
+          <p><a href="https://dl.acm.org/doi/abs/10.1145/3490148.3538554">Brief Announcement: Nested Active-Time Scheduling.</a> <br>Nairen Cao, 
+          <a href="http://people.cs.georgetown.edu/~jfineman/"> Jeremy T. Fineman</a>, 
+          <a href="https://cse.buffalo.edu/~shil/"> Shi Li</a>, 
+          <a href="https://scholar.google.com.au/citations?hl=en&user=Tbp-tkcAAAAJ&view_op=list_works&sortby=pubdate"> Julián Mestre</a>, 
+
+          <a href="https://katinarussell.github.io/"> Katina Russell</a>,
+          <a href="http://williamumboh.com/"> Seeun William Umboh</a> <br>
+          SPAA 2022 [<a href="files/nested_active_problem.pdf"> Paper </a>]</p>
+          </li>
+
+
+          <tr><td valign="top" align="center" width=30px><p>2021</p></td>
+            <td><ul class="publist">
+  
+          <li>
+
+          <p><a href="https://dl.acm.org/doi/10.1145/3465084.3467945">Brief Announcement: An Improved Distributed Approximate Single Source Shortest Paths Algorithm.</a> <br>Nairen Cao, 
+          <a href="http://people.cs.georgetown.edu/~jfineman/"> Jeremy T. Fineman</a>, <a href="https://katinarussell.github.io/"> Katina Russell</a> <br>
+          PODC 2021 [<a href="files/Distributed_shortest_paths__podc_2021.pdf"> Paper </a>]
+          [<a href="files/distributed_SSSP_Slides.pdf"> Slides </a>]  </p>
+          </li>
+
+          <tr><td valign="top" align="center" width=30px><p>2020</p></td>
+            <td><ul class="publist">
+    
+          <li>
+
+          <p><a href="https://dl.acm.org/doi/10.1145/3357713.3384270">Efficient Construction of Directed Hopsets and Parallel Approximate Shortest Paths.</a> <br>Nairen Cao, 
+          <a href="http://people.cs.georgetown.edu/~jfineman/"> Jeremy T. Fineman</a>, <a href="https://katinarussell.github.io/"> Katina Russell</a> <br>
+          STOC 2020 [<a href="files/efficienthopsets.pdf"> Paper </a>]</p>
+          </li>
+
+          <li>
+          <p><a href="https://dl.acm.org/doi/10.1145/3350755.3400222">Improved Work Span Tradeoff for Single Source Reachability and Approximate Shortest Paths.</a> <br>Nairen Cao, 
+          <a href="http://people.cs.georgetown.edu/~jfineman/"> Jeremy T. Fineman</a>, <a href="https://katinarussell.github.io/"> Katina Russell</a> <br>
+          SPAA 2020 [<a href="files/improvedworkspantradeoff.pdf"> Paper </a>]</p>
+          </li>
+
+          <li>
+          <p><a href="https://link.springer.com/chapter/10.1007/978-3-030-45374-9_10">Toward RSA-OAEP without Random Oracles.</a> <br>Nairen Cao, 
+          <a href="https://www.cics.umass.edu/people/oneill-adam">Adam O'Neill</a> and <a href="https://www.linkedin.com/in/mzaheri">Mohammad Zaheri</a> <br>
+          Public Key Cryptography (PKC) 2020 [<a href="files/rsaoaep.pdf"> Paper </a>]</p>
+          </li>
+
+
+        <tr><td valign="top" align="center" width=30px><p>2019</p></td>
+            <td><ul class="publist">
+
+            <li>
+            <p><a href="https://dl.acm.org/doi/full/10.1145/3418356">I/O-Efficient algorithms for topological sort and related problems.</a> <br>
+            Nairen Cao, 
+            <a href="http://people.cs.georgetown.edu/~jfineman/"> Jeremy T. Fineman</a>, 
+            <a href="https://katinarussell.github.io/"> Katina Russell</a>,
+            <a href="http://eugene-yang.github.io/"> Eugene Yang </a> <br>
+            SODA 2019 [<a href="files/iotopologicalsort.pdf"> Paper </a>]</p>
+            </li>
+
+        <tr><td valign="top" align="center" width=30px><p>2016</p></td>
+            <td><ul class="publist">
+
+            <li>
+            <p><a href="https://link.springer.com/chapter/10.1007/978-3-319-56549-1_20">LRCRYPT: Leakage-Resilient Cryptographic System (Design and Implementation).</a> <br>
+            Xiaoqi Yu, Nairen Cao, Gongxian Zeng, Ruoqing Zhang,
+            <a href="https://www.cs.hku.hk/people/academic-staff/smyiu">Siu-Ming Yiu</a><br>
+            WISA 2016 [<a href="files/lrcrypto.pdf"> Paper </a>]</p>
+            </li>
+        </table>
 
 
 
