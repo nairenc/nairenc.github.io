@@ -3,7 +3,7 @@ title: "Breaking 3-Factor Approximation for Correlation Clustering in Polylogari
 collection: publications
 category: conferences
 permalink: /publication/CCparallel_24
-excerpt: #'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2024-1
 venue: #'Journal 1'
 slidesurl: 'files/slides1.pdf'
