@@ -54,7 +54,7 @@
     {% endif %}
     
     {% if post.citation and post.paperurl and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download 1 Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
+      <a href="{{ post.paperurl }}">Download 1 Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% elsif post.citation and post.paperurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download 2 Paper</a></p>
     {% elsif post.citation and post.slidesurl %}
