@@ -5,6 +5,11 @@ permalink: /publications/
 author_profile: true
 ---
 
+<link href="./nairenc_files/css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="./nairenc_files/main.css">
+
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">Publications are listed in reverse chronological order. The most up-to-date list of my publications can be found on my <a href="{{site.author.googlescholar}}"> Google Scholar profile</a>.</div>
 {% endif %}
@@ -32,7 +37,9 @@ author_profile: true
   {% endfor %}
 {% endif %}
 
-<table>
+    <div class="row">
+      <div class="col-md"><h3>Publications</h3>
+        <table>
           <tr><td valign="top" align="center" width=30px><p>2023</p></td>
             <td><ul class="publist">
 
@@ -165,6 +172,5 @@ author_profile: true
             WISA 2016 [<a href="nairenc_files/lrcrypto.pdf"> Paper </a>]</p>
             </li>
         </table>
-
-
-
+        </div>
+      </div>
