@@ -2,10 +2,10 @@
 title: "Breaking 3-Factor Approximation for Correlation Clustering in Polylogarithmic Rounds."
 collection: publications
 category: conferences
-permalink: /publication/2009-10-01-paper-title-number-1
+permalink: files/CCparallel_24.pdf
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2024-1
-venue: #'Journal 1'
+venue: 'SODA 2024'
 slidesurl: #'files/slides1.pdf'
 paperurl: 'files/CCparallel_24.pdf'
 citation: '<br>Nairen Cao, <a href="https://tmt514.github.io/"> Shang-En Huang</a>, <a href="https://sites.google.com/site/distributedhsinhao/"> Hsin-Hao Su</a>  <br>'
