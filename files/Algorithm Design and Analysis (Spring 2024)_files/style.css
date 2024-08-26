@@ -1,0 +1,62 @@
+#wrapper {
+	margin : 0px auto;
+	padding : 30px 30px 0px;
+	background-color:#FFFFFF;
+	text-align: left;
+	font-size : 18px;
+	font-family: "Times New Roman", Times; 
+}
+
+ul.narrowseplist li{
+	padding: 5px 0px 5px;
+	font-size : 20px;
+}
+
+ol.narrowseplist li{
+	padding: 5px 0px 5px;
+	font-size : 20px;
+}
+
+
+ul.wideseplist li{
+	padding: 10px 0px 10px;
+	font-size : 20px;
+}
+
+h1{
+	font-size: 32px;
+	border-bottom: 3px solid #000;
+}
+
+h3{
+	margin: 20px 0px 5px;
+	padding-top: 10px;
+	font-size: 21px;
+	border-top: 1px solid #000;
+}
+
+p {
+	margin : 5px 0px;
+	padding : 10px 20px 0px;
+	font-size : 20px;
+}
+
+ul,ol {
+	margin: 0px;
+	padding: 0px 50px 0px;
+	font-size : 20px;
+}
+
+th, td {
+	padding: 5px 5px;
+}
+
+th, td {
+	text-align: center;
+}
+
+a.clickabstract {
+	text-decoration : underline;
+	cursor : pointer;
+	float:right;
+}
