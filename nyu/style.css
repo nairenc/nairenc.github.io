@@ -105,3 +105,13 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+
+    /* Schedule table sizing & wrapping */
+    #schedule table { width: 100%; border-collapse: collapse; }
+    #schedule col.col-time { width: 180px; }
+    #schedule th:first-child, #schedule td:first-child { white-space: nowrap; }
+    #schedule td:nth-child(2) { overflow-wrap: anywhere; word-break: break-word; }
+
+    @media (max-width: 900px) { #schedule col.col-time { width: 160px; } }
+    @media (max-width: 600px) { #schedule col.col-time { width: 140px; } }
