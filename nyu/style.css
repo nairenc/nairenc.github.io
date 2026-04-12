@@ -1,117 +1,341 @@
-/* Global Styles */
+/* NYU Student Theory Day — shared event styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --nyu-violet: #57068c;
+  --nyu-violet-dark: #4a0578;
+  --nav-bg: #4c2f75;
+  --text: #1a1a1a;
+  --text-muted: #444;
+  --border: #e0dce3;
+  --surface: #ffffff;
+  --page-bg: #f5f3f7;
+  --link: #004481;
+  --link-hover: #002e5c;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(87, 6, 140, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-}
-a {
-  color: #004481;
-  text-decoration: none;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  background-color: var(--page-bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 1.0625rem;
 }
 
-/* Header Styles */
-header {
-  background-color: #57068c; /* NYU Violet */
-  height: 120px; /* Fixed header height */
-  color: #fff;
-  padding: 0 1rem; /* Horizontal padding only */
+a {
+  color: var(--link);
+  text-decoration: none;
+  text-underline-offset: 0.15em;
 }
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--nyu-violet);
+  outline-offset: 2px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, var(--nyu-violet) 0%, var(--nyu-violet-dark) 100%);
+  min-height: 120px;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow);
+}
+
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 104px;
 }
-/* Set fixed widths for left/right columns to balance the center */
+
 .left-column,
 .right-column {
   width: 120px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .center-column {
   flex: 1;
   text-align: center;
+  min-width: 0;
 }
+
+.center-column h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.35rem, 4vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.center-column p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
 .nyu-logo {
   height: auto;
-  max-height: 120px; /* or whatever size you prefer */
+  max-height: 100px;
   width: auto;
+  display: block;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
-  background-color: #4c2f75; /* New complementary dark purple */
-  padding: 1rem;
+  background-color: var(--nav-bg);
+  padding: 0.65rem 1rem;
   text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
+
 nav a {
   color: #fff;
-  margin: 0 1rem;
-  font-size: 1.1rem;
+  margin: 0.35rem 0.65rem;
+  font-size: 0.98rem;
+  font-weight: 500;
   text-decoration: none;
+  display: inline-block;
 }
 
-/* Main Container */
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+nav a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Main */
 .container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 2.5rem;
 }
+
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
+  background: var(--surface);
+  padding: 1.5rem 1.35rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
+
 section h2 {
-  border-bottom: 2px solid #57068c;
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--nyu-violet);
+  border-bottom: 2px solid var(--nyu-violet);
   padding-bottom: 0.5rem;
 }
 
-/* Schedule Table Styles */
+section h3 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+section h3:first-of-type {
+  margin-top: 0;
+}
+
+section p {
+  margin: 0 0 0.85rem;
+  color: var(--text-muted);
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+section ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.35rem;
+  color: var(--text-muted);
+}
+
+section li {
+  margin-bottom: 0.4rem;
+}
+
+section li:last-child {
+  margin-bottom: 0;
+}
+
+/* Schedule table */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
-}
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 0.75rem;
-  text-align: left;
-}
-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  font-size: 0.98rem;
 }
 
-/* Registration Button */
+table th,
+table td {
+  border: 1px solid var(--border);
+  padding: 0.7rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+table thead th {
+  background: var(--nyu-violet);
+  color: #fff;
+  font-weight: 600;
+  border-color: var(--nyu-violet-dark);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #faf8fc;
+}
+
+table tbody tr:hover {
+  background-color: #f3eef8;
+}
+
+/* Registration button */
 .register-btn {
   display: inline-block;
-  background-color: #57068c;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  margin: 1rem 0;
-  border-radius: 5px;
-  font-size: 1.1rem;
+  background-color: var(--nyu-violet);
+  color: #fff !important;
+  padding: 0.65rem 1.35rem;
+  margin: 0.75rem 0;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.register-btn:hover {
+  background-color: var(--nyu-violet-dark);
+  color: #fff !important;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.register-btn:focus-visible {
+  outline: 2px solid var(--nyu-violet);
+  outline-offset: 3px;
 }
 
 /* Footer */
 footer {
-  background-color: #57068c;
+  background-color: var(--nyu-violet);
   color: #fff;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 1.25rem 1rem;
+  margin-top: 0;
+  font-size: 0.9rem;
 }
 
+footer p {
+  margin: 0;
+  opacity: 0.92;
+}
 
-    /* Schedule table sizing & wrapping */
-    #schedule table { width: 100%; border-collapse: collapse; }
-    #schedule col.col-time { width: 180px; }
-    #schedule th:first-child, #schedule td:first-child { white-space: nowrap; }
-    #schedule td:nth-child(2) { overflow-wrap: anywhere; word-break: break-word; }
+/* Schedule: time column & wrapping */
+#schedule {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
-    @media (max-width: 900px) { #schedule col.col-time { width: 160px; } }
-    @media (max-width: 600px) { #schedule col.col-time { width: 140px; } }
+#schedule table {
+  min-width: 520px;
+}
+
+#schedule col.col-time {
+  width: 180px;
+}
+
+#schedule th:first-child,
+#schedule td:first-child {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+#schedule td:nth-child(2) {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  #schedule col.col-time {
+    width: 160px;
+  }
+}
+
+@media (max-width: 640px) {
+  .left-column,
+  .right-column {
+    width: 72px;
+  }
+
+  .nyu-logo {
+    max-height: 72px;
+  }
+
+  .header-container {
+    min-height: auto;
+  }
+
+  section {
+    padding: 1.15rem 1rem;
+  }
+
+  #schedule col.col-time {
+    width: 132px;
+  }
+
+  #schedule table {
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.55rem 0.6rem;
+  }
+}
