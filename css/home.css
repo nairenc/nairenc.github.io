@@ -1,12 +1,12 @@
 /* Homepage — layout & visuals (loads after Bootstrap main.css) */
 
 .site-home {
-  --accent: #57068c;
-  --accent-dark: #4a0578;
-  --link: #004481;
-  --link-hover: #002e5c;
-  --page-bg: #f5f3f7;
-  --card-border: #e0dce3;
+  --accent: #8a1f2d;
+  --accent-dark: #681722;
+  --link: #8a1f2d;
+  --link-hover: #681722;
+  --page-bg: #f8f4f4;
+  --card-border: #e6d9db;
   --text: #1a1a1a;
   --text-muted: #3d3d3d;
 }
@@ -27,7 +27,7 @@ body.site-home .top-frame {
   max-height: 140px;
   padding: 0.4rem 0;
   background-image:
-    linear-gradient(105deg, rgba(87, 6, 140, 0.42) 0%, rgba(45, 90, 120, 0.38) 100%),
+    linear-gradient(105deg, rgba(138, 31, 45, 0.52) 0%, rgba(104, 23, 34, 0.42) 100%),
     url("../photos/background.jpg");
   background-repeat: no-repeat;
   background-position: center 65%;
@@ -80,7 +80,7 @@ body.site-home .top-frame .title-holder .row .banner-title {
 }
 
 .site-home .banner-title a:hover {
-  color: #f0e6ff;
+  color: #f8e8ea;
 }
 
 .site-home .main-frame {
@@ -97,7 +97,7 @@ body.site-home .top-frame .title-holder .row .banner-title {
   background: #fff;
   border: 1px solid var(--card-border);
   border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(87, 6, 140, 0.07);
+  box-shadow: 0 1px 4px rgba(138, 31, 45, 0.08);
 }
 
 .site-home h1,
@@ -171,7 +171,7 @@ body.site-home .top-frame .title-holder .row .banner-title {
 
 /* News callout */
 .site-home .home-news {
-  background: linear-gradient(135deg, #faf7fc 0%, #f0ebf7 100%);
+  background: linear-gradient(135deg, #fcf8f8 0%, #f6ebed 100%);
   border: 1px solid var(--card-border);
   border-radius: 8px;
   padding: 1.25rem 1.35rem;
@@ -180,7 +180,7 @@ body.site-home .top-frame .title-holder .row .banner-title {
 
 .site-home .home-news h3 {
   margin-top: 0 !important;
-  border-bottom-color: rgba(87, 6, 140, 0.35);
+  border-bottom-color: rgba(138, 31, 45, 0.35);
 }
 
 .site-home .publist {
