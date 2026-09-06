@@ -1,0 +1,99 @@
+% Nairen Cao -- editable academic CV. Compile with XeLaTeX (twice) or Tectonic.
+% Content: index.html, publication.html, prior CV, and user-confirmed NYU end date.
+% SUFE start date is unconfirmed; "Current" intentionally avoids inventing a date.
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.68in,top=0.58in,bottom=0.6in]{geometry}
+\usepackage{fontspec}
+\setmainfont{texgyrepagella}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\usepackage{xcolor,hyperref,enumitem,titlesec,fancyhdr,lastpage,needspace}
+\definecolor{ink}{HTML}{183B4A}
+\definecolor{muted}{HTML}{53636B}
+\hypersetup{colorlinks=true,urlcolor=ink,pdftitle={Nairen Cao | Curriculum Vitae},pdfauthor={Nairen Cao}}
+\pagestyle{fancy}\fancyhf{}
+\fancyfoot[L]{\sffamily\footnotesize\color{muted}Nairen Cao\quad |\quad Curriculum Vitae}
+\fancyfoot[R]{\sffamily\footnotesize\color{muted}September 6, 2026\quad |\quad \thepage/\pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.3pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{3pt}
+\titleformat{\section}{\large\sffamily\bfseries\color{ink}}{}{0pt}{}[\vspace{-4pt}\color{ink}\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{7pt}
+\setlist[itemize]{leftmargin=12pt,itemsep=2pt,topsep=2pt,parsep=0pt}
+\newcommand{\role}[4]{\needspace{4\baselineskip}\textbf{#1}\hfill{\small\color{muted}#2}\if\relax\detokenize{#3}\relax\else\\#3\fi\if\relax\detokenize{#4}\relax\else\\{\small\color{muted}#4}\fi\par\vspace{3pt}}
+\newcounter{pub}
+\newcommand{\publication}[3]{\stepcounter{pub}\begin{samepage}\noindent\begin{minipage}[t]{0.045\linewidth}\sffamily\small\color{muted}\thepub.\end{minipage}\begin{minipage}[t]{0.95\linewidth}\textbf{#1}\\#2\\{\small\sffamily\color{ink}#3}\end{minipage}\par\vspace{7pt}\end{samepage}}
+\begin{document}
+{\fontsize{29}{33}\selectfont\sffamily\bfseries\color{ink}Nairen Cao}\hfill{\sffamily\small CURRICULUM VITAE}\par
+{\sffamily\large Associate Professor}\par
+Institute for Theoretical Computer Science\quad |\quad School of Computing and Artificial Intelligence\\
+Shanghai University of Finance and Economics\\
+\href{mailto:caonairen@sufe.edu.cn}{caonairen@sufe.edu.cn}\quad $\cdot$\quad
+\href{https://nairenc.github.io}{nairenc.github.io}\quad $\cdot$\quad
+\href{https://scholar.google.com/citations?user=OiiBPDwAAAAJ}{Google Scholar}\quad $\cdot$\quad
+\href{https://dblp.org/pid/176/9518.html}{DBLP}
+
+\section{Research Interests}
+Design and analysis of algorithms for combinatorial optimization; graph and clustering algorithms, including parallel and distributed algorithms; applications to LLM systems, including LLM evaluation and KV-cache optimization.
+
+\section{Education}
+\role{Ph.D. in Computer Science, Georgetown University}{2016 - 2022}{Advisors: Jeremy T. Fineman and Ophir Frieder}{Dissertation: \href{https://repository.library.georgetown.edu/handle/10822/1068370}{Single-source Shortest Paths for Digraphs}}
+\role{M.S. in Software Engineering, Peking University}{2013 - 2016}{}{}
+\role{B.Eng. in Software Engineering, Sun Yat-sen University}{2009 - 2013}{}{}
+
+\section{Academic Appointments}
+\role{Associate Professor}{Current}{Shanghai University of Finance and Economics}{Institute for Theoretical Computer Science, School of Computing and Artificial Intelligence}
+\role{Faculty Fellow}{Sep. 2024 - Jun. 16, 2026}{Department of Computer Science, NYU Tandon School of Engineering}{Host: Martin Farach-Colton}
+\role{Postdoctoral Researcher}{Sep. 2022 - Aug. 2024}{Department of Computer Science, Boston College}{Host: Hsin-Hao Su}
+\role{Research Assistant}{Mar. 2019 - May 2019}{Institute for Theoretical Computer Science, Shanghai University of Finance and Economics}{Host: Zhihao Tang}
+\role{Research Assistant}{Sep. 2014 - Aug. 2016}{Department of Computer Science, The University of Hong Kong}{Host: Siu-Ming Yiu}
+
+\section{Honors}
+\textbf{Outstanding Paper Award}, ACM Symposium on Parallelism in Algorithms and Architectures (SPAA 2023 and SPAA 2022).
+
+\section{Conference Publications}
+\publication{\href{https://doi.org/10.4230/LIPIcs.ICALP.2026.48}{Static to Dynamic Correlation Clustering}}{\textbf{Nairen Cao}, Vincent Cohen-Addad, Euiwoong Lee, Shi Li, David Rasmussen Lolck, Alantha Newman, Mikkel Thorup, Lukas Vogl, Shuyi Yan, Hanwen Zhang}{International Colloquium on Automata, Languages, and Programming (ICALP 2026)}
+\publication{\href{https://dl.acm.org/doi/10.1145/3801894}{Bounding the Fragmentation of B-Trees Subject to Batched Insertions}}{Michael A. Bender, Aaron Bernstein, \textbf{Nairen Cao}, Alexander Conway, Martín Farach-Colton, Hanna Komlós, Yarin Shechter, Nicole Wein}{ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems (PODS 2026)}
+\publication{\href{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2025.41}{Min-Max Correlation Clustering via Neighborhood Similarity}}{\textbf{Nairen Cao}, Steven Roche, Hsin-Hao Su}{European Symposium on Algorithms (ESA 2025)}
+\newpage
+\section{Conference Publications (continued)}
+\publication{\href{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.40}{Simultaneously Approximating All Norms for Massively Parallel Correlation Clustering}}{\textbf{Nairen Cao}, Shi Li, Jia Ye}{International Colloquium on Automata, Languages, and Programming (ICALP 2025)}
+\publication{\href{https://arxiv.org/abs/2503.20883}{Solving the Correlation Cluster LP in Sublinear Time}}{\textbf{Nairen Cao}, Vincent Cohen-Addad, Euiwoong Lee, Shi Li, David Rasmussen Lolck, Alantha Newman, Mikkel Thorup, Lukas Vogl, Shuyi Yan, Hanwen Zhang}{ACM Symposium on Theory of Computing (STOC 2025)}
+\publication{\href{https://dl.acm.org/doi/abs/10.1145/3618260.3649749}{Understanding the Cluster LP for Correlation Clustering}}{\textbf{Nairen Cao}, Vincent Cohen-Addad, Euiwoong Lee, Shi Li, Alantha Newman, Lukas Vogl}{ACM Symposium on Theory of Computing (STOC 2024)}
+\publication{\href{https://epubs.siam.org/doi/10.1137/1.9781611977912.143}{Breaking 3-Factor Approximation for Correlation Clustering in Polylogarithmic Rounds}}{\textbf{Nairen Cao}, Shang-En Huang, Hsin-Hao Su}{ACM-SIAM Symposium on Discrete Algorithms (SODA 2024)}
+\publication{\href{https://nairenc.github.io/nairenc_files/parallel_negative_SSSP_almost_linear.pdf}{Parallel and Distributed Exact Single-Source Shortest Paths with Negative Edge Weights}}{Vikrant Ashvinkumar, Aaron Bernstein, \textbf{Nairen Cao}, Christoph Grunau, Bernhard Haeupler, Yonggang Jiang, Danupon Nanongkai, Hsin-Hao Su}{European Symposium on Algorithms (ESA 2024)}
+\publication{\href{https://dl.acm.org/doi/10.1145/3558481.3591078}{Nearly Optimal Parallel Algorithms for Longest Increasing Subsequence}}{\textbf{Nairen Cao}, Shang-En Huang, Hsin-Hao Su}{ACM Symposium on Parallelism in Algorithms and Architectures (SPAA 2023), \textbf{Outstanding Paper Award}}
+\publication{\href{https://epubs.siam.org/doi/10.1137/1.9781611977554.ch166}{Parallel Exact Shortest Paths in Almost Linear Work and Square Root Depth}}{\textbf{Nairen Cao}, Jeremy T. Fineman}{ACM-SIAM Symposium on Discrete Algorithms (SODA 2023)}
+\publication{\href{https://drops.dagstuhl.de/opus/volltexte/2022/17321/}{Nested Active-Time Scheduling}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Shi Li, Julián Mestre, Katina Russell, Seeun William Umboh}{International Symposium on Algorithms and Computation (ISAAC 2022)}
+\publication{\href{https://dl.acm.org/doi/abs/10.1145/3490148.3538583}{Parallel Shortest Paths with Negative Edge Weights}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Katina Russell}{ACM Symposium on Parallelism in Algorithms and Architectures (SPAA 2022), \textbf{Outstanding Paper Award}}
+\publication{\href{https://dl.acm.org/doi/abs/10.1145/3490148.3538554}{Brief Announcement: Nested Active-Time Scheduling}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Shi Li, Julián Mestre, Katina Russell, Seeun William Umboh}{ACM Symposium on Parallelism in Algorithms and Architectures (SPAA 2022)}
+\publication{\href{https://dl.acm.org/doi/10.1145/3465084.3467945}{Brief Announcement: An Improved Distributed Approximate Single Source Shortest Paths Algorithm}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Katina Russell}{ACM Symposium on Principles of Distributed Computing (PODC 2021)}
+\publication{\href{https://dl.acm.org/doi/10.1145/3357713.3384270}{Efficient Construction of Directed Hopsets and Parallel Approximate Shortest Paths}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Katina Russell}{ACM Symposium on Theory of Computing (STOC 2020)}
+\publication{\href{https://dl.acm.org/doi/10.1145/3350755.3400222}{Brief Announcement: Improved Work Span Tradeoff for Single Source Reachability and Approximate Shortest Paths}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Katina Russell}{ACM Symposium on Parallelism in Algorithms and Architectures (SPAA 2020)}
+\newpage
+\section{Conference Publications (continued)}
+\publication{\href{https://link.springer.com/chapter/10.1007/978-3-030-45374-9_10}{Toward RSA-OAEP without Random Oracles}}{\textbf{Nairen Cao}, Adam O'Neill and Mohammad Zaheri}{IACR International Conference on Practice and Theory of Public-Key Cryptography (PKC 2020)}
+\publication{\href{https://nairenc.github.io/nairenc_files/iotopologicalsort.pdf}{I/O-Efficient Algorithms for Topological Sort and Related Problems}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Katina Russell, Eugene Yang}{ACM-SIAM Symposium on Discrete Algorithms (SODA 2019)}
+\section{Journal Publications}
+\publication{\href{https://dl.acm.org/doi/10.1145/3648695}{Self-supervised Representation Learning on Electronic Health Records with Graph Kernel Infomax}}{Hao-Ren Yao, \textbf{Nairen Cao}, Katina Russell, Der-Chen Chang, Ophir Frieder, Jeremy T. Fineman}{ACM Transactions on Computing for Healthcare (HEALTH) 2024}
+\publication{\href{https://doi.org/10.1145/3418356}{I/O-Efficient Algorithms for Topological Sort and Related Problems}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Katina Russell, Eugene Yang}{ACM Transactions on Algorithms 18(1), 2022}
+\section{Workshop Papers and Posters}
+\publication{\href{https://openreview.net/forum?id=GlVWFamE4j\&noteId=EPUyGqC3I7}{Efficient Cost-Aware LLM Evaluation via Bayesian Bandit Gittins Indices}}{Qian Xie, Yueli He, \textbf{Nairen Cao}}{International Conference on Machine Learning (ICML 2026) Workshop on Decision-Making from Offline Datasets to Online Adaptation: Black-Box Optimization to Reinforcement Learning (DEMO), \textbf{Spotlight}}
+\publication{Efficient Construction of Directed Hopsets and Parallel Single-source Shortest Paths}{\textbf{Nairen Cao}, Jeremy T. Fineman, Katina Russell}{Highlights of Parallel Computing (HOPC 2023)}
+\publication{\href{https://link.springer.com/chapter/10.1007/978-3-319-56549-1_20}{LRCRYPT: Leakage-Resilient Cryptographic System (Design and Implementation)}}{Xiaoqi Yu, \textbf{Nairen Cao}, Gongxian Zeng, Ruoqing Zhang, Siu-Ming Yiu}{International Workshop on Information Security Applications (WISA 2016)}
+\section{Teaching}
+\textbf{Instructor, NYU Tandon School of Engineering}
+\begin{itemize}
+\item CS-GY 6033, Design and Analysis of Algorithms I: Fall 2024, Fall 2025.
+\item CS-GY 6753, Theory of Computation: Spring 2025, Spring 2026.
+\end{itemize}
+\textbf{Teaching Assistant, Georgetown University}
+\begin{itemize}
+\item Database Management Systems: Fall 2019, Spring 2020, Spring 2021 (Ophir Frieder).
+\item Algorithms: Fall 2020 (Jeremy T. Fineman).
+\end{itemize}
+
+\section{Professional Service}
+Organizer, NYC Student Theory Day: Spring 2025, Fall 2025, Spring 2026.\\
+Organizer, NYC Graduate Student TCS Day: October 18, 2024.\\
+Reviewer for SPAA, SODA, STOC, FOCS, ITCS, PODC, ICALP, and other conferences.
+
+\end{document}

@@ -1,0 +1,90 @@
+% Industry research resume. Compile with XeLaTeX (twice) or Tectonic.
+% Based on the academic CV and local research papers. Research outcomes are
+% collaborative results. Personal experiment design, implementation, student supervision,
+% and major clustering theory contributions were confirmed by the user.
+% Tailor to a job description and add verified programming tools before applying.
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.62in,top=0.48in,bottom=0.48in]{geometry}
+\usepackage{fontspec}
+\setmainfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\usepackage{xcolor,hyperref,enumitem,titlesec,fancyhdr,lastpage}
+\definecolor{ink}{HTML}{183B4A}
+\hypersetup{colorlinks=true,urlcolor=ink,pdftitle={Nairen Cao | Industry Research Resume},pdfauthor={Nairen Cao}}
+\pagestyle{fancy}\fancyhf{}
+\fancyfoot[L]{\footnotesize\color{ink}Nairen Cao | Industry Research Resume}
+\fancyfoot[R]{\footnotesize\color{ink}\thepage/\pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\footskip}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\raggedright
+\titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}[\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+\setlist[itemize]{leftmargin=12pt,itemsep=3pt,topsep=3pt,parsep=0pt}
+\newcommand{\project}[2]{\textbf{#1}\hfill{\small\color{ink}#2}\par}
+\newcounter{paper}
+\newcommand{\publication}[3]{\stepcounter{paper}\begin{samepage}\noindent\begin{minipage}[t]{0.04\linewidth}\small\color{ink}\thepaper.\end{minipage}\begin{minipage}[t]{0.955\linewidth}\textbf{#1}\\#2\\{\fontsize{8.7}{10.3}\selectfont\color{ink}#3}\end{minipage}\par\vspace{5pt}\end{samepage}}
+\begin{document}
+\fontsize{10.5}{13}\selectfont
+{\fontsize{25}{28}\selectfont\bfseries\color{ink}Nairen Cao}\par
+{\large LLM Evaluation \enspace |\enspace Clustering \enspace |\enspace Scalable Algorithms}\par
+\href{mailto:caonairen@sufe.edu.cn}{caonairen@sufe.edu.cn}\quad |\quad
+\href{https://nairenc.github.io}{nairenc.github.io}\quad |\quad
+\href{https://scholar.google.com/citations?user=OiiBPDwAAAAJ}{Google Scholar}\par
+Computer science Ph.D. and Associate Professor specializing in cost-aware LLM evaluation, clustering theory, and scalable graph algorithms; experience in experiment design, implementation, and student supervision.
+
+\section{Selected Research Experience}
+\project{Cost-Aware LLM Evaluation}{2026}
+\begin{itemize}
+\item Designed and implemented experiments for cost-aware LLM evaluation using Bayesian bandits; supervised students in running the experiments and comparing adaptive evaluation policies.
+\item Evaluated a Gittins-index policy combining posterior uncertainty, adaptive sampling, and a stopping rule; offline index precomputation supports efficient online decisions under unequal evaluation costs.
+\item On GSM8K, PIQA, and MMLU response matrices, the reported experiments often achieved near-zero simple regret at stopping with \textbf{about 1--10\% of the exhaustive evaluation budget}; comparisons included Bayesian optimization and frequentist bandit baselines.
+\end{itemize}
+{\small\textbf{Recognition:} ICML 2026 DEMO Workshop Spotlight; publication details on page 2.}\par
+\vspace{4pt}
+\project{Scalable Correlation Clustering}{2024--2026}
+\begin{itemize}
+\item Main contributor to theory across \textbf{six papers} on correlation clustering: cluster linear programs, min-max and simultaneous-norm objectives, parallel algorithms, and dynamic updates.
+\item Joint results include a (3 + ε) min-max approximation in nearly linear time in positive edges and a (1.485 + ε) total-disagreement approximation with nearly linear dependence on vertices for fixed ε; developed approaches for scalable computation.
+\end{itemize}
+\vspace{4pt}
+\project{Parallel and Distributed Graph Algorithms}{2019--2024}
+\begin{itemize}
+\item Co-authored eight conference and journal publications on algorithms for exact and approximate shortest paths, directed hopsets, reachability, and I/O-efficient topological sorting, including graphs with negative edge weights.
+\item Joint exact shortest-path work achieved almost linear work and approximately square-root parallel depth for non-negative integer weights; negative-weight shortest-path research received a \textbf{2022 Outstanding Paper Award}.
+\end{itemize}
+
+\section{Education}
+\textbf{Ph.D., Computer Science}, Georgetown University\hfill 2016--2022\\
+{\small Advisors: Jeremy T. Fineman and Ophir Frieder}\par
+\textbf{M.S., Software Engineering}, Peking University\hfill 2013--2016\par
+\textbf{B.Eng., Software Engineering}, Sun Yat-sen University\hfill 2009--2013
+
+\section{Professional Experience}
+\textbf{Associate Professor}, Shanghai University of Finance and Economics\hfill Current\\
+{\small Institute for Theoretical Computer Science, School of Computing and Artificial Intelligence}\par
+\textbf{Faculty Fellow}, NYU Tandon School of Engineering\hfill Sep. 2024 -- Jun. 16, 2026\par
+\textbf{Postdoctoral Researcher}, Boston College\hfill Sep. 2022 -- Aug. 2024
+
+\section{Expertise and Recognition}
+\textbf{Methods:} Bayesian bandits, sequential decision-making, approximation algorithms, combinatorial optimization, graph clustering, parallel and distributed algorithms.\par
+\textbf{Outstanding Paper Awards:} ACM Symposium on Parallelism in Algorithms and Architectures (SPAA 2023 and SPAA 2022).
+\newpage
+{\Large\bfseries\color{ink}Nairen Cao}\par
+\section{Selected Publications}
+{\small Selected work in LLM evaluation, clustering, and scalable algorithms. Full list: \href{https://nairenc.github.io/publication.html}{nairenc.github.io/publication.html}.}\par
+\vspace{4pt}
+\fontsize{9.4}{11.2}\selectfont
+\publication{\href{https://openreview.net/forum?id=GlVWFamE4j\&noteId=EPUyGqC3I7}{Efficient Cost-Aware LLM Evaluation via Bayesian Bandit Gittins Indices}}{Qian Xie, Yueli He, \textbf{Nairen Cao}}{International Conference on Machine Learning (ICML 2026) Workshop on Decision-Making from Offline Datasets to Online Adaptation: Black-Box Optimization to Reinforcement Learning (DEMO), \textbf{Spotlight}}
+\publication{\href{https://doi.org/10.4230/LIPIcs.ICALP.2026.48}{Static to Dynamic Correlation Clustering}}{\textbf{Nairen Cao}, Vincent Cohen-Addad, Euiwoong Lee, Shi Li, David Rasmussen Lolck, Alantha Newman, Mikkel Thorup, Lukas Vogl, Shuyi Yan, Hanwen Zhang}{International Colloquium on Automata, Languages, and Programming (ICALP 2026)}
+\publication{\href{https://arxiv.org/abs/2503.20883}{Solving the Correlation Cluster LP in Sublinear Time}}{\textbf{Nairen Cao}, Vincent Cohen-Addad, Euiwoong Lee, Shi Li, David Rasmussen Lolck, Alantha Newman, Mikkel Thorup, Lukas Vogl, Shuyi Yan, Hanwen Zhang}{ACM Symposium on Theory of Computing (STOC 2025)}
+\publication{\href{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2025.41}{Min-Max Correlation Clustering via Neighborhood Similarity}}{\textbf{Nairen Cao}, Steven Roche, Hsin-Hao Su}{European Symposium on Algorithms (ESA 2025)}
+\publication{\href{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.40}{Simultaneously Approximating All Norms for Massively Parallel Correlation Clustering}}{\textbf{Nairen Cao}, Shi Li, Jia Ye}{International Colloquium on Automata, Languages, and Programming (ICALP 2025)}
+\publication{\href{https://dl.acm.org/doi/abs/10.1145/3618260.3649749}{Understanding the Cluster LP for Correlation Clustering}}{\textbf{Nairen Cao}, Vincent Cohen-Addad, Euiwoong Lee, Shi Li, Alantha Newman, Lukas Vogl}{ACM Symposium on Theory of Computing (STOC 2024)}
+\publication{\href{https://epubs.siam.org/doi/10.1137/1.9781611977912.143}{Breaking 3-Factor Approximation for Correlation Clustering in Polylogarithmic Rounds}}{\textbf{Nairen Cao}, Shang-En Huang, Hsin-Hao Su}{ACM-SIAM Symposium on Discrete Algorithms (SODA 2024)}
+\publication{\href{https://nairenc.github.io/nairenc_files/parallel_negative_SSSP_almost_linear.pdf}{Parallel and Distributed Exact Single-Source Shortest Paths with Negative Edge Weights}}{Vikrant Ashvinkumar, Aaron Bernstein, \textbf{Nairen Cao}, Christoph Grunau, Bernhard Haeupler, Yonggang Jiang, Danupon Nanongkai, Hsin-Hao Su}{European Symposium on Algorithms (ESA 2024)}
+\publication{\href{https://dl.acm.org/doi/10.1145/3558481.3591078}{Nearly Optimal Parallel Algorithms for Longest Increasing Subsequence}}{\textbf{Nairen Cao}, Shang-En Huang, Hsin-Hao Su}{ACM Symposium on Parallelism in Algorithms and Architectures (SPAA 2023), \textbf{Outstanding Paper Award}}
+\publication{\href{https://epubs.siam.org/doi/10.1137/1.9781611977554.ch166}{Parallel Exact Shortest Paths in Almost Linear Work and Square Root Depth}}{\textbf{Nairen Cao}, Jeremy T. Fineman}{ACM-SIAM Symposium on Discrete Algorithms (SODA 2023)}
+\publication{\href{https://dl.acm.org/doi/abs/10.1145/3490148.3538583}{Parallel Shortest Paths with Negative Edge Weights}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Katina Russell}{ACM Symposium on Parallelism in Algorithms and Architectures (SPAA 2022), \textbf{Outstanding Paper Award}}
+\publication{\href{https://dl.acm.org/doi/10.1145/3357713.3384270}{Efficient Construction of Directed Hopsets and Parallel Approximate Shortest Paths}}{\textbf{Nairen Cao}, Jeremy T. Fineman, Katina Russell}{ACM Symposium on Theory of Computing (STOC 2020)}
+\end{document}
